@@ -58,11 +58,11 @@ void QuaternionToRollPitchYaw::calculate()
     if (timestamp >= _last_timestamp)
     {
       std::array<double, 3> RPY;
-      calculateNextPoint(index, { q_x, q_y, q_z, q_w }, RPY);
+      calculateNextPoint(index, {{ q_x, q_y, q_z, q_w }}, RPY);
 
-      data_roll.pushBack({ timestamp, _scale * (RPY[0] + _roll_offset) });
-      data_pitch.pushBack({ timestamp, _scale * (RPY[1] + _pitch_offset) });
-      data_yaw.pushBack({ timestamp, _scale * (RPY[2] + _yaw_offset) });
+      data_roll.pushBack({{ timestamp, _scale * (RPY[0] + _roll_offset) }});
+      data_pitch.pushBack({{ timestamp, _scale * (RPY[1] + _pitch_offset) }});
+      data_yaw.pushBack({{ timestamp, _scale * (RPY[2] + _yaw_offset) }});
 
       _last_timestamp = timestamp;
     }

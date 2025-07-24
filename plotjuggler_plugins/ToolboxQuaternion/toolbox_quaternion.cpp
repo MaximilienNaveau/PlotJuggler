@@ -129,8 +129,8 @@ bool ToolboxQuaternion::eventFilter(QObject* obj, QEvent* ev)
 void ToolboxQuaternion::autoFill(QString prefix)
 {
   QStringList suffix = { "x", "y", "z", "w" };
-  std::array<QLineEdit*, 4> lineEdits = { ui->lineEditX, ui->lineEditY, ui->lineEditZ,
-                                          ui->lineEditW };
+  std::array<QLineEdit*, 4> lineEdits = {{ ui->lineEditX, ui->lineEditY, ui->lineEditZ,
+                                          ui->lineEditW }};
   QStringList names;
   for (int i = 0; i < 4; i++)
   {

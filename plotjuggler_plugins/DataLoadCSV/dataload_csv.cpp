@@ -569,7 +569,7 @@ bool DataLoadCSV::readDataFromFile(FileLoadInfo* info, PlotDataMapRef& plot_data
 
   auto ParseNumber = [&](QString str, bool& is_number) {
     QString str_trimmed = str.trimmed();
-    double val = val = str_trimmed.toDouble(&is_number);
+    double val = str_trimmed.toDouble(&is_number);
     // handle numbers with comma instead of point as decimal separator
     if (!is_number)
     {

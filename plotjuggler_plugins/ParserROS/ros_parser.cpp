@@ -593,11 +593,11 @@ void ParserROS::parsePalStatisticsValues(const std::string& prefix, double& time
   }
 }
 
-constexpr static std::array<BuiltinType, 11> _tsl_type_order = {
+constexpr static std::array<BuiltinType, 11> _tsl_type_order = {{
   BuiltinType::BOOL,   BuiltinType::INT8,    BuiltinType::UINT8,   BuiltinType::INT16,
   BuiltinType::UINT16, BuiltinType::INT32,   BuiltinType::UINT32,  BuiltinType::INT64,
   BuiltinType::UINT64, BuiltinType::FLOAT32, BuiltinType::FLOAT64,
-};
+}};
 static std::unordered_map<std::uint64_t, std::vector<std::string>> _tsl_definitions;
 // Add a buffer for messages that are received before their definition
 static std::unordered_map<

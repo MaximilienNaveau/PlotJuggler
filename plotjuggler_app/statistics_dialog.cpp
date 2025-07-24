@@ -43,8 +43,8 @@ void StatisticsDialog::update(PJ::Range range)
   for (const auto& info : _parent->curveList())
   {
     Statistics stat;
-    double start_time;
-    double end_time;
+    double start_time = 0.0;
+    double end_time = 0.0;
     const auto ts = info.curve->data();
 
     bool first = true;
